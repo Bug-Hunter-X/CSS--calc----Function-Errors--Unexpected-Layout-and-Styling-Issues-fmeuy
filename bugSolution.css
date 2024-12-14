@@ -1,0 +1,17 @@
+/* Corrected CSS using calc() */
+.container {
+  width: 100%; /* Explicitly set width for reliable calc() results */
+  display: flex;
+}
+
+.item {
+  width: calc(50% - 10px); /* Correct usage of calc() */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  padding: 10px;  
+  border: 2px solid black; 
+}
+
+/*Alternative solution if the issue arises from operator precedence: using parentheses*/
+.item-alternative {
+  width: calc((100% - 20px) / 2);
+}
